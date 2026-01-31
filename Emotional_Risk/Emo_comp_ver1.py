@@ -137,9 +137,9 @@ t_stat, p_value = ttest_ind(high_fear, low_fear)
 print(f"t-statistic: {t_stat:.3f}")
 print(f"p-value: {p_value:.3f}")
 if p_value < 0.05:
-    print("✅ Diferencia estadísticamente significativa: el miedo reduce transacciones (Common investors)")
+    print("Diferencia estadísticamente significativa: el miedo reduce transacciones (Common investors)")
 else:
-    print("❌ No hay diferencia significativa (Common investors)")
+    print("No hay diferencia significativa (Common investors)")
 #Dividir por miedo T
 high_fear_T = Treated_investors[Treated_investors['fear'] > Treated_investors['fear'].median()]['Numero transazioni']
 low_fear_T = Treated_investors[Treated_investors['fear'] <= Treated_investors['fear'].median()]['Numero transazioni']
@@ -148,9 +148,9 @@ t_stat_T, p_value_T = ttest_ind(high_fear_T, low_fear_T)
 print(f"t-statistic (Treated investors): {t_stat_T:.3f}")
 print(f"p-value (Treated investors): {p_value_T:.3f}")
 if p_value_T < 0.05:    
-    print("✅ Diferencia estadísticamente significativa: el miedo reduce transacciones (Treated investors)")
+    print("Diferencia estadísticamente significativa: el miedo reduce transacciones (Treated investors)")
 else:
-    print("❌ No hay diferencia significativa (Treated investors)")
+    print("No hay diferencia significativa (Treated investors)")
 
 
 # ¿El miedo inducido reduce la actividad de trading?
